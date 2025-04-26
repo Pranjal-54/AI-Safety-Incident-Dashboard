@@ -1,0 +1,34 @@
+.controls {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    /* Ensure text is dark */
+}
+
+.controlGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.controlGroup label {
+    color: #333;
+    /* Dark label text */
+    font-weight: 500;
+}
+
+.select {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    /* Dark text in select */
+}
+
+/* For better visibility of dropdown options */
+.select option {
+    color: #333;
+    background: white;
+}

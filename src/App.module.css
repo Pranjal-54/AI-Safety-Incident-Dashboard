@@ -1,0 +1,56 @@
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Sets default text color to dark */
+}
+
+.mainContent {
+    flex: 1;
+}
+
+h1 {
+    color: #2d3748;
+    /* Dark blue-gray for main heading */
+    margin-bottom: 8px;
+    /* Reduced space between title and subtitle */
+}
+
+.footer {
+    background: #f5f5f5;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: auto;
+    /* Pushes footer to bottom */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    color: #4a5568;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .radioGroup {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
