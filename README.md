@@ -2,7 +2,7 @@
 
 A frontend application for tracking and reporting AI safety incidents, built with React and TypeScript.
 
-![Dashboard Screenshot](./screenshot.png) *(Optional: Add screenshot path)*
+![Dashboard Screenshot](./ss.png) 
 
 ## Features
 - View, filter, and sort AI safety incidents
@@ -98,3 +98,29 @@ const isSeverity = (value: string): value is Severity => {
   return ['Low', 'Medium', 'High'].includes(value);
 };
 ```
+## 3. State Management Complexity
+
+**Challenge:**  
+Component tree required coordination of:
+- Shared filter state across controls and list
+- Synchronized sort logic between UI and data
+- Form submission callbacks affecting multiple components
+
+**Solution:**  
+Lifted state to the nearest common ancestor (`App` component) and passed down via props:
+
+```tsx
+<App>
+  <ControlsBar 
+    onFilterChange={setFilter} 
+    onSortChange={setSortBy}
+  />
+  <IncidentList 
+    incidents={sortedIncidents} 
+  />
+</App>
+```
+
+## License
+
+MIT © 2025 Pranjal Thakur
